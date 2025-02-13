@@ -1,0 +1,129 @@
+.one {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF5722;
+    background-color: #eee;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: -5px 0px 0 0 #FF5722, 5px 0px 0 0 #2196F3;
+}
+
+.parent,
+.parent2,
+.parent3,
+.parent4 {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: #eee;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.parent div,
+.parent2 div {
+    color: white;
+    width: calc(95% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent div {
+    background-color: #F44336;
+    height: 40px;
+}
+
+.parent2 div {
+    background-color: #607D8B;
+}
+
+.six {
+    order: 1;
+    height: 50%;
+}
+
+.three {
+    order: 2;
+    height: 40px;
+}
+
+.four {
+    order: 3;
+    height: 50%;
+}
+
+.five {
+    order: 4;
+    height: 50%;
+}
+
+.two {
+    order: 5;
+}
+
+.one2 {
+    order: 6;
+    height: 40px;
+    align-self: flex-end;
+    /*align-content: space-between didn't work*/
+}
+
+.parent3 {
+    flex-flow: column;
+}
+
+.parent3 div , .parent4 div{
+    padding: 30px 10px;
+    color: white;
+    background-color: #009688;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one3 {
+    align-self: flex-end;
+}
+
+.two3 {
+    width: 50%;
+}
+.one4 , .three4 { 
+    height: 20%;
+    margin-left: 30%;
+} 
+.two4 , .four4 {
+    height: 20%;
+    margin-right: 30%;
+}
+.one4 {
+    padding: 40px !important;
+    background-color: orange !important; 
+    order: 1;
+}
+.two4 {
+    padding: 40px !important;
+   background-color:blueviolet !important;
+    order: 3;
+}
+.three4 {
+    padding: 40px !important;
+    background-color: #795548 !important; 
+    order: 2;
+}
+.four4 {
+    padding: 40px !important;
+    background-color:forestgreen !important; 
+    order: 4;
+}
+.parent4 {
+    justify-content: space-around;
+}

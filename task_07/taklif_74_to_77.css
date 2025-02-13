@@ -1,0 +1,106 @@
+.one {
+    width: 50px;
+    height: 50px;
+    margin: 100px auto;
+    position: relative;
+    border: 5px solid;
+    border-radius: 50%;
+    border-color: #E91E63 #E91E63 #E91E63 transparent;
+    animation-name: spin ;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.one::after {
+    content: "";
+    width: calc(100% + 15px) ;
+    height:calc(100% + 15px);
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    border: 5px solid;
+    border-radius: 50%;
+    border-color: #03A9F4 transparent #03A9F4 #03A9F4 ;
+}
+.one::before {
+    content: "";
+    width: calc(100% + 33px);
+    height: calc(100% + 33px);
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    border: 5px solid;
+    border-radius: 50%;
+    border-color: #FCAE00  #FCAE00 transparent #FCAE00 ;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.one:hover {
+    /* animation-iteration-count: 0; */
+    animation-play-state: paused;
+}
+.two {
+    width: 50px;
+    height: 50px;
+    margin: 100px auto;
+    position: relative;
+    border: 5px solid;
+    border-radius: 50%;
+    border-color: #03A9F4 #03A9F4 transparent #03A9F4 ;
+    animation-name: spin ;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+.two::after {
+    content: "";
+    width: calc(100% + 15px) ;
+    height:calc(100% + 15px);
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    border: 5px solid;
+    border-radius: 50%;
+    border-color: #FCAE00  #FCAE00 transparent #FCAE00 ;
+    transform: translate(-50% , -50%);
+    animation-delay: 1s;
+}
+.two::before {
+    content: "";
+    width: calc(100% + 30px) ;
+    height:calc(100% + 30px);
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    border: 5px solid;
+    border-radius: 50%;
+    border-color: black black transparent black ;
+    transform: translate(-50% , -50%);
+    animation-delay: 2s;
+}
+
+.two:hover {
+    animation-play-state: running;
+}
+
+span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 100px auto;
+    background-color: #d9d6d6;
+    border: 5px solid black;
+    border-radius: 50%;
+    border-left-color: transparent;
+    animation-name: spin ;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

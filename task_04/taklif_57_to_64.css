@@ -1,0 +1,139 @@
+.grid,
+.grid2,
+.grid3 , .grid4 {
+    background-color: #ddd;
+    padding: 10px;
+    width: 800px;
+    height: 400px;
+    margin: 50px auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+}
+
+.one {
+    height: 20px;
+}
+
+.two {
+    height: 300px;
+}
+
+.grid div {
+    background-color: #607D8B;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+
+.one::after {
+    content: attr(data-element);
+    color: white;
+    font-weight: bold;
+    margin-left: 34%;
+}
+
+.two::after {
+    content: attr(data-element);
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 46%;
+    left: 35%;
+}
+
+.grid2 {
+    text-align: center;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-rows: 1fr auto;
+    gap: 20px;
+}
+
+.grid2 div {
+    color: white;
+    background-color: #403F3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.grid3 {
+    text-align: center;
+   font-size: x-large;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+    grid-template-areas: "eight eight eight" "two two three" "four five five" "six five five" "seven five five" "one one one";
+}
+
+.grid3 div {
+    color: white;
+    background-color: #2196F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one3 {
+    order: 8;
+    grid-area: one;
+}
+
+.two3 {
+    order: 2;
+    grid-area: two;
+}
+
+.three3 {
+    order: 3;
+    grid-area: three;
+}
+
+.four3 {
+    order: 4;
+    grid-area: four;
+}
+
+.five3 {
+    order: 5;
+    grid-area: five;
+}
+
+.six3 {
+    order: 6;
+    grid-area: six;
+}
+
+.seven3 {
+    order: 7;
+    grid-area: seven;
+}
+
+.eight3 {
+    order: 1;
+    grid-area: eight;
+}
+
+.grid4 {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    align-content: space-between;
+}
+.grid4 div {
+    color: white;
+    font-size: x-large;
+    background-color: #E91E63;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
